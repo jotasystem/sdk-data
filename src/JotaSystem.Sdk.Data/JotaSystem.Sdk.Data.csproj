@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+
+		<PackageId>JotaSystem.Sdk.Data</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>Jota System</Authors>
+		<Company>Jota System</Company>
+		<Product>Jota System SDK Data</Product>
+		<Title>Jota System SDK - Data</Title>
+		<Description>Pacote com coleções de dados estáticos e oficiais (bancos, cidades, etc.) e provedores para acesso tipado e reutilizável.</Description>
+		<PackageTags>SDK;Data;StaticData;Reference;Banks;Cities;States;DDD;jotasystem</PackageTags>
+		<RepositoryUrl>https://github.com/jotasystem/JotaSystem.Sdk.Data</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/jotasystem/JotaSystem.Sdk.Data</PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackAsTool>False</PackAsTool>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\icon.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="..\..\docs\**\*.json">
+			<Link>Resources\%(RecursiveDir)%(Filename)%(Extension)</Link>
+		</EmbeddedResource>
+	</ItemGroup>
+
+</Project>
