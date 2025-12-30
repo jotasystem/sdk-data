@@ -10,7 +10,7 @@ jobs:
 
     env:
       CONFIGURATION: Release
-      DOTNET_VERSION: '9.0.x'
+      DOTNET_VERSION: '10.0.x'
       PROJECT_PATH: ./src/JotaSystem.Sdk.Data/JotaSystem.Sdk.Data.csproj
       TEST_PROJECT_PATH: ./tests/JotaSystem.Sdk.Data.Tests/JotaSystem.Sdk.Data.Tests.csproj
       ARTIFACTS_PATH: ./artifacts
