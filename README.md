@@ -1,15 +1,31 @@
 # JotaSystem.Sdk.Data
 
-Pacote base da **Jota System** contendo coleções de dados estáticos e oficiais, como cidades, estados, bancos e outras referências utilizadas em aplicações .NET.
+Biblioteca de dados estáticos e referências embarcadas da **Jota System** para aplicações .NET.
 
----
+## Descrição
 
-## 📦 Descrição
+O `JotaSystem.Sdk.Data` expõe coleções JSON incorporadas ao assembly e acessadas de forma tipada.
 
-O **JotaSystem.Sdk.Data** centraliza conjuntos de dados imutáveis e referências nacionais ou globais, fornecendo acesso tipado e padronizado a informações amplamente utilizadas nas soluções da Jota System.
+Hoje o pacote contém:
 
-Inclui:
-- **Coleções JSON** com dados oficiais (bancos, cidades, estados, DDDs, etc.).
-- **Modelos fortemente tipados** para leitura e manipulação dos dados.
-- **Provedores e utilitários** para acesso performático e reutilizável.
-- **Recursos prontos** para integração com demais SDKs da Jota System.
+- Dados de bancos do Brasil.
+- Dados de estados do Brasil.
+- Dados de cidades do Brasil.
+- Dados de grupos de produtos do Brasil.
+- Dados de países.
+
+## Como funciona
+
+Os arquivos JSON ficam embarcados como `EmbeddedResource` e são carregados por serviços específicos, com cache em memória por tipo de coleção.
+
+Os principais serviços públicos hoje são:
+
+- `BrazilBankData`
+- `BrazilStateData`
+- `BrazilCityData`
+- `BrazilProductGroupData`
+- `CountryData`
+
+## Perfil do pacote
+
+Este SDK não depende de banco de dados nem de APIs externas para entregar os dados. O objetivo é oferecer acesso rápido, tipado e previsível a catálogos de referência usados em outros sistemas da Jota System.
